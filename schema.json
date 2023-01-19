@@ -1,0 +1,81 @@
+{
+  "type": "datasource",
+  "metadata": {
+    "icon": ""
+  },
+  "schema": {
+    "docs": "https://docs.budibase.com",
+    "friendlyName": "Fulcrum APP",
+    "type": "Query API",
+    "description": "Performs a basic HTTP calls to a URL",
+    "datasource": {
+      "apiToken": {
+        "display": "Api Token",
+        "type": "password",
+        "required": true
+      }
+    },
+    "query": {
+      "read": {
+        "type": "fields",
+        "fields": {
+          "format": {
+            "display": "Format",
+            "type": "text",
+            "required": false
+          },
+          "record-id": {
+            "display": "Record Id (Optional)",
+            "type": "string",
+            "required": true
+          },
+          "q": {
+            "display": "Query",
+            "type": "json",
+            "required": false
+          }
+        }
+      },
+      "create": {
+        "type": "fields",
+        "fields": {
+          "form-id": {
+            "display": "Form Id",
+            "type": "string",
+            "required": true
+          },
+          "data": {
+            "display": "Data (JSON)",
+            "type": "json",
+            "required": true
+          }
+        }
+      },
+      "update": {
+        "type": "fields",
+        "fields": {
+          "record-id": {
+            "display": "Record Id",
+            "type": "string",
+            "required": true
+          },
+          "data": {
+            "display": "Data (JSON)",
+            "type": "json",
+            "required": true
+          }
+        }
+      },
+      "delete": {
+        "type": "fields",
+        "fields": {
+          "record-id": {
+            "display": "Record Id",
+            "type": "string",
+            "required": true
+          }
+        }
+      }
+    }
+  }
+}
